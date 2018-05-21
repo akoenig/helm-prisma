@@ -1,6 +1,6 @@
 # Prisma: Helm Chart
 
-A Helm Chart for installing Prisma on a Kubernetes cluster easily.
+A Helm Chart for easily installing Prisma on a Kubernetes cluster.
 
 ## Motivation
 
