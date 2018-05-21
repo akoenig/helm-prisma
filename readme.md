@@ -4,12 +4,12 @@ A Helm Chart for easily installing Prisma on a Kubernetes cluster.
 
 ## Motivation
 
-[Helm](https://helm.sh/) is a package manager for Kubernetes clusters. Think of Homebrew / APT for Kubernetes. It helps to bundle Kubernetes workloads for easy deployment, rollback or removal.
+[Helm](https://helm.sh/) is a package manager for Kubernetes. Think of Homebrew / apt for Kubernetes. It helps to bundle Kubernetes workloads for easy deployment, rollback or removal.
 
 ## Prerequisites
 
 * Installed [helm CLI](https://docs.helm.sh/using_helm/#installing-helm)
-* Kubernetes cluster (e.g. [minikube](https://github.com/kubernetes/minikube) if you want to give test drive this Chart locally)
+* Kubernetes cluster (e.g. [minikube](https://github.com/kubernetes/minikube) if you want to test drive this Chart locally)
 
 ## Installing the Prisma server
 
@@ -64,7 +64,7 @@ endpoint: http://localhost:4467/myservice/production
 datamodel: datamodel.graphql
 ```
 
-In fact, a `prisma deploy` would deploy the service to the Prisma server which is running on the Kubernetes cluster then.
+In fact, a `prisma deploy` would deploy the service to the Prisma server which is running on the Kubernetes cluster.
 
 ## Uninstalling the Prisma server
 
