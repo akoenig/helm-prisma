@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: prisma
+  namespace: prisma
+  labels:
+    stage: production
+    name: prisma 
+    app: prisma
+spec:
+  replicas: {{ .Values.prisma.replicas }}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        stage: production
+        name: prisma 
+        app: prisma
+    spec:
+      containers:
+        - name: prisma
+          image: 'prismagraphql/prisma:1.8'
+          ports:
+            - name: prisma
+              containerPort: {{ .Values.prisma.port }}
+          env:
+            - name: PRISMA_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: prisma-configmap
+                  key: PRISMA_CONFIG

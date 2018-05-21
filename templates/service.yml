@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prisma
+  namespace: prisma
+spec:
+  ports:
+  - port: {{ .Values.prisma.port }}
+    targetPort: {{ .Values.prisma.port }}
+    protocol: TCP
+  selector:
+    stage: production
+    name: prisma 
+    app: prisma
